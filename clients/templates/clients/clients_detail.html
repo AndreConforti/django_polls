@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block 'body' %}
+    <h1>{{ client }}</h1>
+
+    <ul>
+        <li>{{ client.first_name }}</li>
+        <li>{{ client.last_name }}</li>
+        <li>{{ client.cpf }}</li>
+        <li>{{ client.phone }}</li>
+        <li>{{ client.email }}</li>
+        <li>{{ client.debt }}</li>
+    </ul>
+{% endblock %}

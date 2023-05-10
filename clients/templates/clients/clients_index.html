@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block 'body' %}
+    {% if latest_five_clients %}
+        <ul>
+            {% for client in latest_five_clients %}
+                <li><a href="{% url 'clients:clients_details' client.id %}">{{ client }}</a></li>
+            {% endfor %}
+        </ul>
+    {% else %} 
+        <p> No clients are avaliable.</p>
+    {% endif %}
+{% endblock %}
